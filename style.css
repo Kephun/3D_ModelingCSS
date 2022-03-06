@@ -1,0 +1,122 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --rotateSpeed: 30s;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    transform-style: preserve-3d;
+    animation: sceneRotate var(--rotateSpeed) infinite linear;
+}
+
+@keyframes sceneRotate {
+    to {transform: rotateY(360deg); }
+}
+
+.tv {
+    position: absolute;
+    font-size: 75px;
+    top: 35vh;
+    left: 42vw;
+    transform-style: preserve-3d;
+    transform: rotateX(-0deg) rotateY(-120deg);
+}
+
+#front, #back{
+    position: absolute;
+    background: gray;
+    height: 2em;
+    width: 2em;
+    border: 1px solid black;
+}
+#behind{
+    position: absolute;
+    background: gray;
+    height: 1em;
+    width: 1em;
+    border: 1px solid black;
+}
+#left, #right {
+    position: absolute;
+    background: gray;
+    height: 2em;
+    width: 1em;
+    border: 1px solid black;
+}
+#top, #bottom {
+    position: absolute;
+    background: gray;
+    height: 1em;
+    width: 2em;
+    border: 1px solid black;
+}
+#lslant, #rslant, #tslant, #bslant {
+    position: absolute;
+    border-bottom: 1em solid #c5bfdf;
+    border-left: .375em solid transparent;
+    border-right: .375em solid transparent;
+    height: 0;
+    width: 1em;
+}
+
+#front{
+    transform: rotateX(0deg) translateZ(.5em) 
+}
+#back{
+    transform: rotateX(0deg) translateZ(-.5em) 
+}
+#behind{
+    transform: rotateX(0deg) translateZ(-1.5em) translateX(0.5em) translateY(0.5em)
+}
+#left{
+    transform: rotateY(-90deg) translateZ(.5em) 
+}
+#right{
+    transform: rotateY(90deg) translateZ(1.5em) 
+}
+#top{
+    transform: rotateX(90deg) translateZ(.5em) 
+}
+#bottom{
+    transform: rotateX(-90deg) translateZ(1.5em) 
+}
+#rslant{
+    transform: rotateY(90deg)
+    rotateZ(90deg)
+    rotateX(14.036deg)
+    translateY(-.8em)
+    translateZ(1em)
+    translateX(.5em)
+}
+#lslant{
+    transform: rotateY(-90deg)
+    rotateZ(-90deg)
+    rotateX(14.036deg)
+    translateY(-.8em)
+    translateZ(.75em)
+    translateX(-.5em)
+}
+#tslant{
+    transform:
+    rotateX(67.964deg)
+    translateZ(-1.25em);
+}
+#rslant{
+    transform: rotateY(90deg)
+    rotateZ(90deg)
+    rotateX(14.036deg)
+    translateY(-.8em)
+    translateZ(1em)
+    translateX(.5em)
+}
+
