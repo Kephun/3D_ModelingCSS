@@ -4,10 +4,10 @@
 }
 
 :root {
-    --rotateSpeed: 5s;
+    --rotateSpeed: 10s;
 }
 body {
-    background: black;
+    background: #294D4A;
     min-height: 100vh;
     font-size: 50px;
 }
@@ -19,6 +19,7 @@ body {
     position:relative;
     height: 100vh;
     width: 100vw;
+    
     animation: sceneRotate var(--rotateSpeed) infinite linear;
     transform-style: preserve-3d;
 }
@@ -47,7 +48,7 @@ body {
     background: gray;
     height: 1em;
     width: 1em;
-    border: 1px solid black;
+
 }
 #left, #right {
     position: absolute;
@@ -63,7 +64,23 @@ body {
     width: 2em;
     border: 1px solid black;
 }
+.t, .b{
+    position:absolute;
+    height: 0em;
+    width: 1em;
+    border-bottom: 1em solid rgb(235, 95, 95);
+    border-left: .1em solid transparent; 
+    border-right: .1em solid transparent;
 
+}
+.l, .r{
+    position:absolute;
+    height: 0em;
+    width: 1em;
+    border-bottom: 1em solid rgb(82, 42, 42);
+    border-left: .17em solid transparent; 
+    border-right: .17em solid transparent;
+}
 #front{
     transform: rotateY(0deg) translateZ(.5em);
 }
@@ -84,4 +101,17 @@ body {
 }
 #behind{
     transform: rotateY(180deg) translateZ(1.5em);
+}
+/* Back part of the TV */
+.t{
+    transform: rotateX(100deg) translateY(-.89em) translateZ(.75em)
+}
+.b{
+    transform: rotateX(80deg) translateY(-.89em) translateZ(-.75em)
+}
+.l{
+    transform: rotateZ(-90deg) rotateX(96deg) translateY(-.95em) translateZ(.65em);
+}
+.r{
+    transform: rotateZ(90deg) rotateX(96deg) translateY(-.95em) translateZ(.65em);
 }
