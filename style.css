@@ -1,15 +1,17 @@
 * {
     margin: 0px;
     padding: 0px;
+
 }
 
 :root {
     --rotateSpeed: 10s;
 }
 body {
-    background: #294D4A;
+    box-sizing: border-box;
+    background: #2A3D45;
     min-height: 100vh;
-    font-size: 50px;
+    font-size: 60px; /* Make the TV and the rest any size */
 }
 
 .container {
@@ -34,50 +36,47 @@ body {
     justify-content: center;
     align-items: center;
     transform-style: preserve-3d;
-}
 
+}
 #front, #back{
     position: absolute;
-    background: gray;
     height: 2em;
     width: 2em;
-    border: 1px solid black;
+    background-color: #7A6C5D;
+}
+#back{
+    background:#685B50;
 }
 #behind{
     position: absolute;
-    background: gray;
     height: 1em;
     width: 1em;
-
+    background-color: #685B50;
 }
 #left, #right {
     position: absolute;
-    background: gray;
     height: 2em;
     width: 1em;
-    border: 1px solid black;
+    background-color: #7A6C5D;
 }
 #top, #bottom {
     position: absolute;
-    background: gray;
     height: 1em;
     width: 2em;
-    border: 1px solid black;
 }
 .t, .b{
     position:absolute;
     height: 0em;
     width: 1em;
-    border-bottom: 1em solid rgb(235, 95, 95);
+    border-bottom: 1em solid #685B50;
     border-left: .1em solid transparent; 
     border-right: .1em solid transparent;
-
 }
 .l, .r{
     position:absolute;
     height: 0em;
     width: 1em;
-    border-bottom: 1em solid rgb(82, 42, 42);
+    border-bottom: 1em solid #685B50;
     border-left: .17em solid transparent; 
     border-right: .17em solid transparent;
 }
@@ -85,7 +84,7 @@ body {
     transform: rotateY(0deg) translateZ(.5em);
 }
 #back{
-    transform: rotateY(180deg) translateZ(.5em);
+    transform: rotateY(180deg) translateZ(.51em);
 }
 #left{
     transform: rotateY(270deg) translateZ(1em);
@@ -100,18 +99,18 @@ body {
     transform: rotateX(270deg) translateZ(1em);
 }
 #behind{
-    transform: rotateY(180deg) translateZ(1.5em);
+    transform: rotateY(180deg) translateZ(1.4em);
 }
 /* Back part of the TV */
 .t{
-    transform: rotateX(100deg) translateY(-.89em) translateZ(.75em)
+    transform: rotateX(100deg) translateY(-.87em) translateZ(.75em)
 }
 .b{
-    transform: rotateX(80deg) translateY(-.89em) translateZ(-.75em)
+    transform: rotateX(80deg) translateY(-.87em) translateZ(-.75em)
 }
 .l{
-    transform: rotateZ(-90deg) rotateX(96deg) translateY(-.95em) translateZ(.65em);
+    transform: rotateZ(-90deg) rotateX(96deg) translateY(-.93em) translateZ(.65em);
 }
 .r{
-    transform: rotateZ(90deg) rotateX(96deg) translateY(-.95em) translateZ(.65em);
+    transform: rotateZ(90deg) rotateX(96deg) translateY(-.93em) translateZ(.65em);
 }
