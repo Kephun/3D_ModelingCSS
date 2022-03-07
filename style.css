@@ -4,32 +4,35 @@
 }
 
 :root {
-    --rotateSpeed: 30s;
+    --rotateSpeed: 5s;
 }
 body {
-    height: 100vh;
-    width: 100vw;
+    background: black;
+    min-height: 100vh;
+    font-size: 50px;
 }
 
 .container {
-    position: absolute;
-    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    height: 100vh;
     width: 100vw;
-    transform-style: preserve-3d;
     animation: sceneRotate var(--rotateSpeed) infinite linear;
+    transform-style: preserve-3d;
 }
 
 @keyframes sceneRotate {
     to {transform: rotateY(360deg); }
-}
+}   
 
 .tv {
-    position: absolute;
-    font-size: 75px;
-    top: 35vh;
-    left: 42vw;
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     transform-style: preserve-3d;
-    transform: rotateX(-0deg) rotateY(-120deg);
 }
 
 #front, #back{
@@ -60,63 +63,25 @@ body {
     width: 2em;
     border: 1px solid black;
 }
-#lslant, #rslant, #tslant, #bslant {
-    position: absolute;
-    border-bottom: 1em solid #c5bfdf;
-    border-left: .375em solid transparent;
-    border-right: .375em solid transparent;
-    height: 0;
-    width: 1em;
-}
 
 #front{
-    transform: rotateX(0deg) translateZ(.5em) 
+    transform: rotateY(0deg) translateZ(.5em);
 }
 #back{
-    transform: rotateX(0deg) translateZ(-.5em) 
-}
-#behind{
-    transform: rotateX(0deg) translateZ(-1.5em) translateX(0.5em) translateY(0.5em)
+    transform: rotateY(180deg) translateZ(.5em);
 }
 #left{
-    transform: rotateY(-90deg) translateZ(.5em) 
+    transform: rotateY(270deg) translateZ(1em);
 }
 #right{
-    transform: rotateY(90deg) translateZ(1.5em) 
+    transform: rotateY(90deg) translateZ(1em);
 }
 #top{
-    transform: rotateX(90deg) translateZ(.5em) 
+    transform: rotateX(90deg) translateZ(1em);
 }
 #bottom{
-    transform: rotateX(-90deg) translateZ(1.5em) 
+    transform: rotateX(270deg) translateZ(1em);
 }
-#rslant{
-    transform: rotateY(90deg)
-    rotateZ(90deg)
-    rotateX(14.036deg)
-    translateY(-.8em)
-    translateZ(1em)
-    translateX(.5em)
+#behind{
+    transform: rotateY(180deg) translateZ(1.5em);
 }
-#lslant{
-    transform: rotateY(-90deg)
-    rotateZ(-90deg)
-    rotateX(14.036deg)
-    translateY(-.8em)
-    translateZ(.75em)
-    translateX(-.5em)
-}
-#tslant{
-    transform:
-    rotateX(67.964deg)
-    translateZ(-1.25em);
-}
-#rslant{
-    transform: rotateY(90deg)
-    rotateZ(90deg)
-    rotateX(14.036deg)
-    translateY(-.8em)
-    translateZ(1em)
-    translateX(.5em)
-}
-
